@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "955d06f9-3604-4310-90b3-a735ff2c6a9a",
+		"name": "travel-finder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23223327"
+	},
+	"item": [
+		{
+			"name": "GET/ travels - correctly receives correct input format 'Mad' and returns output with matches",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"city_name\": \"Mad\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/travels",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"travels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/ travels - receives invalid input (less than three letters) and returns error message",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"city_name\" : \"Ma\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/travels",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"travels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/ travels - correctly receives input in Arabic and returns expected travel data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"city_name\" : \"الأقصر\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/travels",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"travels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/ travels - correctly receives input in Mandarin and returns expected travel data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"city_name\" : \"北京市\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/travels",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"travels"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
