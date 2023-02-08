@@ -11,20 +11,20 @@ initDB();
 // Mock data seeding
 seedData();
 
-//Import route
+// Import routes
 const travel_routes = require('./routes/travels');
 
-// Middlewares
+// Global Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // routes
 app.use('/', travel_routes);
 
-
 // invalid route handling
-//app.use((req, res) => res.status(404).json({ status: "error", error: "PAGE NOT FOUND"}));
+app.use((req, res) => res.status(404).json({ status: "error", error: "Not Found"}));
 
+// starts server
 app.listen(process.env.API_PORT, () => {
     console.log(`server running on port ${process.env.API_PORT}`)
 });

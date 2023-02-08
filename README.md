@@ -23,7 +23,6 @@ Europe Popular Capitals; Land Trip; 3 days; Madrid, Paris, London; Hotel Best Ma
 
 - The API defines one single endpoint, **GET /travels**, which returns the desired output. 
 
-
 ## 💻 Prerequsites
 
 Before getting started, please make sure the following technology is installed in your system:
@@ -56,21 +55,24 @@ npm install
 
 > **Step 4** - Launch the project...
 
-For production mode:
+(production mode):
 ````
 npm run start
 ````
-
-For development mode:
-
+or (dev mode using nodemon): 
 ````
 npm run dev
 ````
 
+This will do **three** things: 
+1. Start the server
+2. Connect to a MongoDB server instance (e.g.running on localhost:27017) and use your db_name database, once it is created. 
+3. Create a MongoDB database by initializing a the travelpackages collection. 
 ## 🧪 Testing
 
-- For testing purposes, I've created a function (in the folder utils/) to seed our mongodb database with fake data. 
+- For testing purposes, I've created a function (in the folder utils/) to seed our mongodb database with mock data. 
 - To test our API's endpoint, use [Postman](https://www.postman.com/) -- or your preferred API testing client. 
+
 
 
 

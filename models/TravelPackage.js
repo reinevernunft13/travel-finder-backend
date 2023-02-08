@@ -25,13 +25,14 @@ const TravelPackageSchema = new Schema({
         flights: [flightSchema]
     },
 })
-
-TravelPackageSchema.pre('save', (next) => {
+// Pre-save hook (document middleware)
+TravelPackageSchema.pre('save', next => {
+    //'this' refers to the document; i.e. the particular instance of the Model class that is about to be saved
     const travelpackage = this;
 
-    if(travelpackage.trip_type === 'land trip') {
+    if(travelpackage.trip_type === 'Land Trip') {
         travelpackage.details = { hotels: travelpackage.details }
-    } else if (travelpackage.trip_type === 'air trip') {
+    } else if (travelpackage.trip_type === 'Air Trip') {
         travelpackage.details = { flights: travelpackage.details }
     }
 
