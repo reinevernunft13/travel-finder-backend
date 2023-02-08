@@ -15,7 +15,7 @@ const TravelPackageSchema = new Schema({
     name: String,
     trip_type: { 
         type: String,
-        enum: ['land trip', 'air trip'],
+        enum: ['Land Trip', 'Air Trip'],
         required: true
     },
     duration: Number,

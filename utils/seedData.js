@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const TravelPackage  = require('../models/TravelPackage.js');
 
-const testData = [
-  {
+const testData = [{
+
   name: "Europe Popular Capitals",
-  trip_type: 'land trip',
+  trip_type: 'Land Trip',
   duration: 3,
   cities: ['Madrid', 'Paris', 'London'],
   details: {
@@ -20,19 +20,43 @@ const testData = [
   },
   {
     name: "Europe Whatever",
-    trip_type: 'land trip',
+    trip_type: 'Land Trip',
     duration: 3,
-    cities: ['Madrid', 'Paris', 'London'],
+    cities: ['Berlin', 'Madrid'],
     details: {
       hotels: [{
           name: 'Hotel Best Madrid',
-          category: '3'
+          category: 3
       },
       {
           name: 'Hotel Worst Berlin',
-          category: '4'
+          category: 4
       }]
     }
+  }, 
+  {
+    name: 'Infinite Egypt',
+    trip_type: 'Air Trip',
+    duration: 4,
+    cities: ['Madrid', 'القاهرة', 'الأقصر'],
+    details: {
+        flights: [
+            { departureCity: 'Madrid', departureTime: '09:00' },
+            { departureCity: 'الأقصر', departureTime: '10:00' },
+        ],
+    },
+  },
+  {
+    name: 'Incredible China',
+    trip_type: 'Air Trip',
+    duration: 10,
+    cities: ['Barcelona', 'Madrid', '广州市', '北京市'],
+    details: {
+        flights: [
+            { departureCity: 'Madrid', departureTime: '09:00' },
+            { departureCity: '北京市', departureTime: '10:00' },
+        ]
+    },
   }
 ];
 
