@@ -3,12 +3,12 @@
 This project is a solution to the 2023 *Vueling Tech Hack* challenge (back-end).
 ## 📓 Description
 
-❗❗ Build a **travel search engine** for an Online Travel Agency. The app must: 
+ℹ️ Build a **travel search engine** for an Online Travel Agency. The app must: 
     - take at least three letters to run the search.   
     - search for trips containing cities that match the text entered by the user.
     - support Middle East and Asian languages.
 
-ℹ️ Further details on functional and technical details, [here](https://nuwe.io/dev/competitions/vueling-tech-hack/travel-search-backend-challenge).
+👉 Further details on functional and technical details, [here](https://nuwe.io/dev/competitions/vueling-tech-hack/travel-search-backend-challenge).
 
 - As a **solution**, I've created a RESTful API in NodeJs, using:
 
@@ -65,9 +65,7 @@ npm run dev
 3. Create a MongoDB database by initializing the 'travelpackages' collection. 
 ## 🧪 Testing
 
-- The output for each search input should follow this format. 
-
-By entering 'Mad' (and sending the requesting in the req.body):
+The output for each search input must follow a standard format. For example, by entering 'Mad' (and sending the request in the req.body):
 
 ```
 { "city_name": "Mad" }
@@ -79,7 +77,7 @@ Europe Popular Capitals; Land Trip; 3 days; Madrid, Paris, London; Hotel Best Ma
 ````
 
 
-- To test the API's endpoint, use [Postman](https://www.postman.com/) -- or your preferred API testing client. A postman collection with various 'http requests' can be found in folder '/postman'.
+To test the API's endpoint, use [Postman](https://www.postman.com/) -- or your preferred API testing client. A postman collection with various 'http requests' can be found in folder '/postman'.
 
 
 
